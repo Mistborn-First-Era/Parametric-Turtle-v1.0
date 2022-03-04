@@ -1,8 +1,9 @@
 # Parametric-Turtle-v1.0
 
+I made this in Thonny - Finished it March, 04 2022    
+
 You will probably need Ghostscript to write gifs with ImageIO  
-Ghostscript requires you to REBOOT YOUR COMPUTER  
-other than that just download PIL and imageio  
+Ghostscript requires you to REBOOT YOUR COMPUTER other than that just download PIL and imageio  
 
 The only variables I would recommend chaging are  
   112 - setup  
