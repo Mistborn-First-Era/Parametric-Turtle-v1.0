@@ -12,9 +12,9 @@ The only variables I would recommend chaging are
   120 - vertrical stretch  
   121 - horizontal stretch  
   122 - graph accuracy and speed (more precise takes longer)  
-  123 - how long the output gif is in seconds (this is a minimum time and may sometimes be larger during small inacurate low framecount graphs)  
+  123 - how long the output gif is in seconds (this is a minimum time and may sometimes be larger during small inaccurate low framecount graphs)  
   124 - makes the graph more dense (requires more accuracy)  
-  125 - the total number of frames (this is a minimum number of frames and may sometimes be larger during small inacurate low framecount graphs)  
+  125 - the total number of frames (this is a minimum number of frames and may sometimes be larger during small inaccurate low framecount graphs)  
   126 - offset angle (like a unit circle from 90 is up)  
   127 - initial starting point of the graph (the graph cycles through 2π rotations of t so this doesn't effect too much)  
   128 - the save_rate should only be changed if your memory becomes too full.  
