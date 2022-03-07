@@ -109,26 +109,28 @@ for gif_count in range(makegif_reps):
     penup()
     speed(0)
     colormode(255)
-    setup(1700, 900, 2100, 85) #Turtle window size
+    setup(1400, 1900, 0, 0) #Turtle window size
     setposition(0, 0)
     pendown()
 #---Turtle Initialization
     
 #---Main Variables
     mydir = chdir(r"C:\Users\Brandon\Documents\Thonny doc\Gif compile folder (don't touch)")
-    pensize(1)
-    y_s = 160                 #Graph size y-scaler
-    x_s = 250                 #Graph size x-scaler 
-    step_size = .0001          #Stepsize scaler 
-    gif_length = 7            #Length in sec
+    pensize(3)
+    y_s = 220                 #Graph size y-scaler
+    x_s = 320                 #Graph size x-scaler 
+    step_size = .0003          #Stepsize scaler 
     v = 100                    #Graph density scaler
-    number_of_frames = (150)  #Minimum frame count
+    gif_length = 7            #Length in sec
+    fps = 40                  #Frames per second
     right(int(0))             #Graph angle
     t = float(0)              #Initial t
     save_rate = 100           #memory bank size (DNT)
 #---Ajustable ^ static v
+    number_of_frames = floor(fps * gif_length)
     dura = gif_length / number_of_frames
     loops = ceil((2 * pi / step_size))
+    fps_rounded = ceil(fps)
     screencap_rate = floor(loops / number_of_frames)
     picture_set = []
     all_gifs = []
@@ -255,7 +257,7 @@ for gif_count in range(makegif_reps):
         gif_data = get_reader(all_gifs[i])                 #Adds all the frames from each gif to a bigger new_gif
         for frames in range(num_frames):
             new_gif.append_data(gif_data.get_next_data())
-        print(f"{i+1/(len(all_gifs)):.2%} Done with {gif_name}'s final build")
+        print(f"{(i + 1) / (len(all_gifs)):.2%} Done with {gif_name}'s final build  i = {i}  len(all_gifs) = {len(all_gifs)}")
 
     gif_data = get_reader(all_gifs[-1])                    #Appends the last gif
     num_frames = gif_data.get_length()
