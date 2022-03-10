@@ -109,21 +109,21 @@ for gif_count in range(makegif_reps):
     penup()
     speed(0)
     colormode(255)
-    setup(1400, 1900, 0, 0) #Turtle window size
-    setposition(0, 0)
+    setup(.9, .65, 80, 80) #Turtle window size
+    setposition(100, 100)
     pendown()
 #---Turtle Initialization
     
 #---Main Variables
     mydir = chdir(r"C:\Users\Brandon\Documents\Thonny doc\Gif compile folder (don't touch)")
     pensize(3)
-    y_s = 220                 #Graph size y-scaler
-    x_s = 320                 #Graph size x-scaler 
-    step_size = .0003          #Stepsize scaler 
-    v = 100                    #Graph density scaler
-    gif_length = 7            #Length in sec
-    fps = 40                  #Frames per second
-    right(int(0))             #Graph angle
+    y_s = 150                 #Graph size y-scaler
+    x_s = 150                 #Graph size x-scaler 
+    step_size = .01          #Stepsize scaler 
+    v = 10                    #Graph density scaler
+    gif_length = 3            #Length in sec
+    fps = 20                  #Frames per second
+    right(int(0))            #Graph angle
     t = float(0)              #Initial t
     save_rate = 100           #memory bank size (DNT)
 #---Ajustable ^ static v
@@ -132,6 +132,10 @@ for gif_count in range(makegif_reps):
     loops = ceil((2 * pi / step_size))
     fps_rounded = ceil(fps)
     screencap_rate = floor(loops / number_of_frames)
+    if screencap_rate == 0:
+        print("Lower the gif_length or fps. Or decrease the step_size.")
+        bye()
+        exit()
     picture_set = []
     all_gifs = []
     number_of_gifs_created_counter = 0
