@@ -5,6 +5,8 @@ I made this in Thonny - Finished it March, 04 2022
 You will probably need Ghostscript to write gifs with ImageIO  
 Ghostscript requires you to REBOOT YOUR COMPUTER other than that just download PIL and imageio  
 
+Some lines are now incorrect*  
+
 The only variables I would recommend chaging are  
   112 - setup  
   118 - output folder - IMPORTANT (This program will delete all files that begin with "temp_" in this file location)  
